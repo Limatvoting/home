@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biometric Online Voting System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px; 
+            background-color: #f2f2f2;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.5s;
+        }
+
+        .logo {
+            color: #007bff;
+            font-size: 32px;
+            margin-right: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #007bff;
+        }
+	        h1 {
+            margin: 0;
+        }
+	 header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .candidate {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .candidate img {
+            float: left;
+            margin-right: 10px;
+        }
+        .candidate-info {
+            float: left;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer p {
+            margin: 0;
+            color: #777;
+        }
+
+.party-info {
+            text-align: right;
+        }
+        .party-logo {
+            display: block;
+            max-width: 150px;
+            margin-bottom: 50px;
+            float: right;
+
+        }
+        .dashboard-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+       .bottom-right {
+       display: block;
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+        margin: 10px; /* Adjust margin as needed */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-vote-yea"></i> VotingSystem
+            </div>
+          
+            <nav class="nav-menu">
+                 <a href="Canidate_dashboard.html">Dashboard</a>
+		<a href="index.html" onclick="logout()">Logout</a>
+
+            </nav>
+
+        </div>
+ 
+ <header>
+        <h1>Election 2024</h1>
+        </header>
+        <main>
+        <div class="dashboard-info">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png" alt="Party Logo" class="party-logo">
+ 
+ 
+            <section id="votingResults">
+                <h2>My Voting Results</h2>
+                <div id="voteCount"></div>
+            </section>
+            <section id="votingStats">
+                <h2>Voting Statistics</h2>
+                <p>Total Votes Received: <span id="totalVotes"></span></p>
+                <p>Percentage of Total Votes: <span id="votePercentage"></span>%</p>
+            </section>
+        </div>
+    </main>
+
+        <div class="footer">
+            <p>&copy; 2024 Biometric Online Voting System. All rights reserved.</p>
+        </div>
+    <script>
+        // Example data for demonstration
+        var voteCount = 123;
+        var totalVotes = 1000;
+        var votePercentage = (voteCount / totalVotes) * 100;
+
+        // Update DOM with data
+        document.getElementById("voteCount").innerText = "Votes Received: " + voteCount;
+        document.getElementById("totalVotes").innerText = totalVotes;
+        document.getElementById("votePercentage").innerText = votePercentage.toFixed(2);
+
+        // Logout function
+        function logout() {
+            // Clear any user session data or perform any necessary logout actions here
+
+            // Redirect the user to the login page
+            window.location.href = "login.html"; // Replace "login.html" with the actual login page URL
+        }
+    </script>
+
+</body>
+</html>
